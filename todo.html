@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@200;400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+
+  </head>
+
+  <body>
+
+    <section class="wrapper">
+      <div class="container">
+
+        <div class="search-container">
+          <input class="input" id="todo-title" type="text" placeholder="Enter task..">
+          <button class="add-button" onclick="addTodo()">Add</button>
+        </div>
+        <div class="date-pick-container">
+          <input id="date-picker" type="date">
+        </div>
+
+        <div class="todo-list" id="todo-list"></div>
+      </div>
+ 
+
+    </section>
+
+    <script src="app.js"></script>
+
+  </body>
+
+</html>

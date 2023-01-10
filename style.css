@@ -1,0 +1,121 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Lexend', sans-serif;
+}
+
+:root {
+  --white: #ffffff;
+  --off-white: #e5e5e5;
+  --transp-white-1: rgba(255, 255, 255, 0.25);
+  --transp-white-2: rgba(255, 255, 255, 0.1);
+  --color-1: #e9c46a;
+  --color-2: #fefae0;
+  --color-3: #582f0e;
+  --shadow: #F5EBE0;
+}
+body {
+  font-size: 16px;
+  background: var(--color-1)
+}
+
+.wrapper {
+  width: 500px; /* fixed width */
+  height: 500px; /* fixed height */
+  overflow: auto;
+  background-color: var(--color-2);
+  
+  border-radius: 12px;
+
+  margin: auto;
+  margin-top: 50px;
+}
+.container .search-container {
+  display: grid;
+  grid-template-columns: 6fr 2fr;
+
+  margin-top: 25px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.container .search-container .input {
+  padding: 10px;
+  border: none;
+
+  margin-right: 20px;
+}
+.container .search-container .add-button {
+  padding: 10px;
+  border: none;
+  border-radius: 2px;
+  color: var(--off-white);
+  background-color: var(--color-3);
+
+  margin: 5px;
+}
+.container .search-container .add-button:hover {
+  cursor: pointer;
+  background-color: var(--color-1);
+  transition: all 0.2s ease-in-out;
+}
+.container .search-container .add-button:active {
+  background-color: var(--color-2);
+}
+
+input[type="date"] {
+  color: #582f0e;
+  background-color: #fff;
+  border: 2px solid #582f0e;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding: 3px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+input[type="date"]:hover {
+  background-color: #582f0e;
+  color: #fff;
+}
+
+input[type="date"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #582f0e;
+}
+
+.created-todo-div {
+  display: grid;
+  grid-template-columns: 5fr 2fr 2fr;
+  align-items: center;
+  vertical-align: auto;
+
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.title-class {
+  margin-left: 30px;
+}
+
+.delete-icon {
+  width: 20px;
+  padding-top: 5px;
+}
+.delete-button {
+  height: 30px;
+  width: 50px;
+  background-color: var(--color-2);
+  border: none;
+  cursor: pointer;
+}
+.delete-button:hover{
+  background-color: var(--color-1);
+  transition: all 0.2s ease-in-out;
+}
+.delete-button:active {
+  background-color: var(--color-2);
+}
