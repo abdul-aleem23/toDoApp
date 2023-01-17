@@ -89,7 +89,7 @@ input[type="date"]:focus {
 
 .created-todo-div {
   display: grid;
-  grid-template-columns: 5fr 2fr 2fr;
+  grid-template-columns: 5fr 2fr 0.50fr 2fr;
   align-items: center;
   vertical-align: auto;
 

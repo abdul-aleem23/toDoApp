@@ -54,7 +54,14 @@
       function saveTodos(){
       localStorage.setItem('todos', JSON.stringify(todos));
     }
-  
+
+    function toggleTodo(todoId, checked) {
+      todos.forEach(function (todo) {
+        if (todo.id === todoId) {
+          todo.isDone = checked;
+        }
+      });
+    }
     render();
 
   // Controller
@@ -78,6 +85,16 @@
     render(); 
   }
 
+  function checkTodo (event) {
+    const checkBox = event.target;
+    const todoId = checkBox.dataset.todoId;
+    const checked = checkBox.checked;
+
+    toggleTodo(todoId, checked);
+    render();
+
+  }
+
   // View
   function render (){
     //reset our list to be empty
@@ -86,6 +103,18 @@
     todos.forEach(function (todo) {
       const element = document.createElement('div');
       element.className = 'created-todo-div'// gives the todo div a class.
+
+      //Checkbox
+      let checkBox = document.createElement('input');
+      checkBox.type = "checkbox";
+      checkBox.onchange = checkTodo;
+      checkBox.dataset.todoId = todo.id;
+      if (todo.isDone === true){
+        checkBox.checked = true;
+      } else {
+        checkBox.checked = false;
+      }
+
 
       const deleteButton = document.createElement('button');
       deleteButton.innerHTML = '<img class = "delete-icon "src="icons/delete-icon.svg">';
@@ -112,6 +141,8 @@
       element.appendChild(titleElement);
       element.appendChild(dueDateElement);
 
+      element.appendChild(checkBox);
       element.appendChild(deleteButton);
+      
     });
   }
